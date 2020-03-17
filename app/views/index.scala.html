@@ -1,0 +1,63 @@
+@(message: String)
+
+@main("Welcome to Play") {
+        <section>
+            <h1 class="introMessage"> Welcome to the Pig Game!!</h1>
+            <div>
+                <p class="para">A game for everyone!</p>
+            </div>
+        </section>
+        <section style="padding-bottom: 140px">
+            <div>
+                <div class="box" id="player1">
+                    <h1 class="guide" id="steps"> <i class="fas fa-key"></i> How to play </h1>
+
+                    <center>
+                        <ul>
+
+                            <li> &bullet; Read the rules before you start the game. &nbsp; <i class="far fa-hand-point-right"></i>
+                            </li>
+                            <li>&bullet; Click the button below to begin. </li>
+                            <li>&bullet; Players have to input their names before the start of the game.</li>
+
+                            <li>&bullet; Both players decide on an end point and input the value (must be equal to or greater than 50). </li>
+                            <li>&bullet; The 'New Game' button has to be clicked to start the game. </li>
+
+
+                            <li>&bullet; Enjoy the game!!</li>
+
+
+
+                        </ul>
+                    </center>
+
+                </div>
+
+                <div class="box" id="rules">
+                    <h1 class="guide"> <i class="fas fa-pen-fancy"></i> Rules</h1>
+                    <center>
+                        <ul>
+
+                            <li>&bullet; Each turn, a player repeatedly rolls a dice until either a 1 is rolled or the player decides to "hold" </li>
+
+                            <li> &bullet; If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+
+                            <li>&bullet; If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+                            <li> &bullet; If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+                            </li>
+                            <li> &bullet; The first player to reach the end point wins!</li>
+
+                        </ul>
+                    </center>
+
+                </div>
+            </div>
+            <center>
+                <button class="btn">Click to begin</button> </a>
+            </center>
+        </section>
+
+
+
+
+}
