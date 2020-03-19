@@ -1,7 +1,7 @@
 package models
 
 import play.api.data.Form
-import play.api.data.Forms.mapping
+import play.api.data.Forms._
 
 case class PostDetails( post :String )
 

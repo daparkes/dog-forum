@@ -57,7 +57,4 @@ class ApplicationUsingJsonReadersWriters @Inject()(
       Ok(persons.toString)
     }
   }
-
-
-
 }

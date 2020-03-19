@@ -21,5 +21,4 @@ class LoginController @Inject()(cc: ControllerComponents) extends AbstractContro
         BadRequest("Incorrect username or password")
     })
   }
-
 }
