@@ -142,7 +142,6 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after{content:url(/assets/image
 body{
     margin: 0 auto;
     width:100%;
-    background-image: url(/assets/images/the-fog-4909513_1920.jpg);
 }
 
 

@@ -1,7 +1,7 @@
 @(form: Form[LoginDetails])(implicit messagesProvider: MessagesProvider)
 
 @main("Login") {
-        <center>
+        <div style="text-align: center;">
                 <div id="login">
                 @helper.form(routes.LoginController.loginSubmit()){
                         @helper.inputText(form("username"), '_label -> "Login",'_showConstraints -> false)
@@ -9,7 +9,7 @@
                         <button type="submit" id="btn">Log In</button>
                 }
                 </div>
-        </center>
+        </div>
 
 
 
