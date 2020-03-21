@@ -5,23 +5,21 @@ import javax.inject.{Inject, Singleton}
 import models.PostDetails
 import play.api.mvc.{AbstractController, Action, AnyContent, ControllerComponents, Request}
 
-object PostController {
-  @Singleton
-  class PostController @Inject()(cc: ControllerComponents, authAction: AuthenticationAction, val app: ApplicationUsingJsonReadersWriters) extends AbstractController(cc) with play.api.i18n.I18nSupport {
-    def post(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
-      Ok(views.html.post(PostDetails.postForm))
-    }
+@Singleton
+class PostController @Inject()(cc: ControllerComponents, authAction: AuthenticationAction, val app: ApplicationUsingJsonReadersWriters) extends AbstractController(cc) with play.api.i18n.I18nSupport {
+  def post(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.post(PostDetails.postForm))
+  }
 
-    def postSubmit(): Action[AnyContent] = authAction { implicit request: Request[AnyContent] =>
-      PostDetails.postForm.bindFromRequest.fold({ formWithErrors =>
-        BadRequest(views.html.post(formWithErrors))
-      }, { postDetails =>
-        Redirect(routes.ApplicationUsingJsonReadersWriters.create())
-      })
-    }
+  def postSubmit(): Action[AnyContent] = authAction { implicit request: Request[AnyContent] =>
+    PostDetails.postForm.bindFromRequest.fold({ formWithErrors =>
+      BadRequest(views.html.post(formWithErrors))
+    }, { postDetails =>
+      Redirect(routes.ApplicationUsingJsonReadersWriters.create())
+    })
+  }
 
-    def viewAllPosts(): Action[AnyContent] = authAction { implicit request: Request[AnyContent] =>
-      Redirect(routes.ApplicationUsingJsonReadersWriters.getAllPosts())
-    }
+  def viewAllPosts(): Action[AnyContent] = authAction { implicit request: Request[AnyContent] =>
+    Redirect(routes.ApplicationUsingJsonReadersWriters.getAllPosts())
   }
 }

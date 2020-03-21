@@ -17,7 +17,7 @@ import play.modules.reactivemongo.{
 
 class ApplicationUsingJsonReadersWriters @Inject()(
                                                     components: ControllerComponents,
-                                                    val reactiveMongoApi: ReactiveMongoApi
+                                                                      val reactiveMongoApi: ReactiveMongoApi
                                                   ) extends AbstractController(components)
   with MongoController with ReactiveMongoComponents {
 
@@ -56,5 +56,13 @@ class ApplicationUsingJsonReadersWriters @Inject()(
     futureUsersList.map { persons =>
       Ok(persons.toString)
     }
+  }
+
+  def getAllPosts: Action[AnyContent] = {
+
+  }
+
+  def getAllPostsFromUser: Action[AnyContent] = {
+
   }
 }

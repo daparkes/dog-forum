@@ -11,10 +11,10 @@ GET         /findByName/:lastName        controllers.ApplicationUsingJsonReaders
 
 GET         /assets/*file                controllers.Assets.at(path="/public", file)
 
-GET         /createPost               controllers.ApplicationUsingJsonReadersWriters.create(comment :String)
-GET         /getAllPosts              controllers.ApplicationUsingJsonReadersWriters.getAllPosts
-GET         /userSpecificPosts        controllers.ApplicationUsingJsonReadersWriters.getAllPostsFromUser(name :String)
+GET         /createPost                  controllers.ApplicationUsingJsonReadersWriters.create(comment :String)
+GET         /getAllPosts                 controllers.ApplicationUsingJsonReadersWriters.getAllPosts
+GET         /userSpecificPosts           controllers.ApplicationUsingJsonReadersWriters.getAllPostsFromUser(name :String)
 
-GET         /post                     controllers.PostController.post
-GET         /allPosts                 controllers.PostController.viewAllPosts
-POST        /post                     controllers.PostController.postSubmit
+GET         /post                        controllers.PostController.post
+GET         /allPosts                    controllers.PostController.viewAllPosts
+POST        /post                        controllers.PostController.postSubmit

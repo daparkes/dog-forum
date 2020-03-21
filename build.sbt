@@ -1,8 +1,8 @@
-name := "Recipies_New_Play_Version"
+name := "dog-forum"
  
 version := "1.0" 
       
-lazy val `recipies_new_play_version` = (project in file(".")).enablePlugins(PlayScala)
+lazy val `dog-forum` = (project in file(".")).enablePlugins(PlayScala)
 
 resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
       
